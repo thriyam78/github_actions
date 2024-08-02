@@ -1,0 +1,16 @@
+name: workflow_02
+
+on:
+  workflow_run:
+    workflows: ["04_workflow_dispatch"]
+    types:
+      - completed
+      
+jobs:
+  echo_hi_all:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Echo Hi All
+         run: |
+           echo "Hi All"
+    

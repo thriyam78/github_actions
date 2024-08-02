@@ -1,0 +1,29 @@
+name: Parallel Jobs (multiple jobs)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Liniting
+        run: echo "Running Liniting"
+
+  unit_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Unit Testing
+        run: echo "Running Unit Test"
+
+  integration_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SetUp Test environment
+        run: echo "Running Test Environment"
+
+      - name: Integration test
+        run: echo "Running Integration Test"

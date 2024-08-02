@@ -1,0 +1,12 @@
+name: "Hello world 01"
+
+on:
+  workflow_dispatch: # this is an object and this event triggers the workflow manually
+
+jobs: # each jobs is an object and it will have its own runner environment and it has its own steps
+  say_hello_world: 
+      runs-on: ubuntu-latest  # this is the runner environment that is running in ubuntu 
+
+      steps: # this step section is an array section 
+         - name: Echo Hello world  # this - before name represent it is an array representation
+           run: echo "Hello world!"

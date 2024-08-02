@@ -1,4 +1,4 @@
-name: Passing Data With steps
+name: Passing Data With steps And Jobs
 
 on:
   workflow_dispatch:

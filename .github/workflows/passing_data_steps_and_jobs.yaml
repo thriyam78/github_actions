@@ -15,6 +15,9 @@ jobs:
       - name: Receive Data
         run: |
           echo ${{steps.sender.outputs.name}}
+    outputs:
+      name: ${{steps.data-passing.outputs.name}}
+      
 
   data-receiving:
      runs-on: ubuntu-latest

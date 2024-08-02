@@ -16,7 +16,7 @@ jobs:
         run: |
           echo ${{steps.sender.outputs.name}}
     outputs:
-      name: ${{steps.data-passing.outputs.name}}
+      name: ${{steps.sender.outputs.name}}
       
 
   data-receiving:
@@ -26,5 +26,3 @@ jobs:
        - name: Get Data
          run: |
            echo ${{needs.data-passing.outputs.name}}
-
-           

@@ -3,16 +3,15 @@ name: Passing Data With steps
 on:
   workflow_dispatch:
 
-
 jobs:
   data-passing:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Create data
-           id: sender
-           run: |
-             echo "name=thriyam" >> $GITHUB_OUTPUT
-            
-         - name: Receive Data
-           run: |
-              echo ${{steps.sender.output.name}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create data
+        id: sender
+        run: |
+          echo "name=thriyam" >> $GITHUB_OUTPUT
+
+      - name: Receive Data
+        run: |
+          echo ${{steps.sender.outputs.name}}
